@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "df0c4026-1bfe-4878-b902-c0867d373f48",
+		"name": "boilerplate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8886109"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@mail.com\",\r\n    \"password\": \"User@987654321\",\r\n    \"first_name\": \"User\",\r\n    \"last_name\": \"L\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@mail.com\",\r\n    \"password\": \"User@987654321\",\r\n    \"role\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@mail.com\",\r\n    \"role\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/forget-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check-reset-token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"forgot_password_code\": \"NOlyMftLfWdvGAWBMJtutrlaqQHfdKOy\",\r\n    \"role\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/check-reset-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"check-reset-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"forgot_password_code\": \"NOlyMftLfWdvGAWBMJtutrlaqQHfdKOy\",\r\n    \"role\": \"user\",\r\n    \"password\": \"User@987654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyc3RfbmFtZSI6IkFiZHVsIiwibWlkZGxlX25hbWUiOm51bGwsImxhc3RfbmFtZSI6IkRld2Fzd2FsYSIsImVtYWlsIjoiYWJkdWxAbWFpbC5jb20iLCJjb3VudHJ5X2NvZGUiOm51bGwsImNvbnRhY3RfbnVtYmVyIjpudWxsLCJnZW5kZXIiOiJ1bnNwZWNpZmllZCIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wMS0xMVQwNToxMjo0MS4xODJaIiwiZmlyc3RfbG9naW5fYXQiOiIyMDI1LTAxLTExVDA1OjEyOjUwLjg1NFoiLCJpYXQiOjE3MzY1NzMwODQsImV4cCI6MTczNjY1OTQ4NH0.OdZ8yKe7arhy94WTmAZQwHAaxfeaiTFXkERy_pCsqwc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"old_password\": \"User@987654321\",\r\n    \"password\": \"User@1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh-token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyc3RfbmFtZSI6IkFiZHVsIiwibWlkZGxlX25hbWUiOm51bGwsImxhc3RfbmFtZSI6IkRld2Fzd2FsYSIsImVtYWlsIjoiYWJkdWxAbWFpbC5jb20iLCJjb3VudHJ5X2NvZGUiOm51bGwsImNvbnRhY3RfbnVtYmVyIjpudWxsLCJnZW5kZXIiOiJ1bnNwZWNpZmllZCIsInJvbGUiOiJ1c2VyIiwiY3JlYXRlZEF0IjoiMjAyNS0wMS0xMVQwNToxMjo0MS4xODJaIiwiZmlyc3RfbG9naW5fYXQiOiIyMDI1LTAxLTExVDA1OjEyOjUwLjg1NFoiLCJpYXQiOjE3MzY1NzMxNzMsImV4cCI6MTczNjY1OTU3M30.BesMg9zvCdLzidXRs49ADd3q4AsrNjTXYYNktYrq-uI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/refresh-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,33 @@
+{
+    "welcome": "Welcome to my API",
+    "hello": "Hello",
+    "commonError": {
+      "fieldNotFound": "Field not found",
+      "fieldRequired": "Field is required"
+    },
+    "auth": {
+      "invalidCredentials": "Invalid credentials",
+      "userNotFound": "User not found",
+      "invalidToken": "Invalid token",
+      "pleaseEnterValidEmail": "Please enter a valid email",
+      "invalidPassword": "Invalid password",
+      "emailAlreadyExist": "Email already exist",
+      "emailNotVerified": "Email not verified",
+      "passwordNotMatch": "Password not match",
+      "tokenExpired": "Token expired",
+      "invalidEmailCode": "Invalid email code",
+      "invalidPasswordCode": "Invalid password code",
+      "invalidPhoneCode": "Invalid phone code",
+      "invalidVerificationCode": "Invalid verification code",
+      "userCreated": "User created successfully",
+      "userUpdated": "User updated successfully",
+      "userDeleted": "User deleted successfully",
+      "userCreateFailed": "User creation failed",
+      "userLoggedIn": "User logged in successfully",
+      "resetPasswordLinkSent": "Reset password link sent",
+      "validCode": "Valid Code",
+      "passwordReset": "Password reset successfully",
+      "passwordChanged": "Password changed successfully"
+    }
+  }
+    
